@@ -19,7 +19,7 @@ body{
 .navbar-brand{
     color: black;
     padding-left: 8.5%;
-    font-size: 2rem;
+    font-size: 2rem !important;
     text-decoration: none;
 }
 .navbar-brand:hover{
@@ -34,12 +34,16 @@ body{
 
 h1{
     text-align: center;
-    padding-top: 10%;
+    padding-top: 8%;
     color: #2D3391;
 }
 
 #form input{
     border: 2px solid #6DBCC1;
+}
+
+#form .is-invalid{
+    border: 2px solid #BA393D;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -65,4 +69,9 @@ input[type=number] {
     padding: 8px 45px 8px 45px;
     border-radius: 5px;
     font-size: 1.3rem;
+}
+.but1:hover{
+    background-color: #2D3391;
+    color: white;
+    transition: 0.3s;
 }

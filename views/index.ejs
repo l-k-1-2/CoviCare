@@ -81,7 +81,8 @@
         <a href="#graphs">
           <button class="but1">See the Stats</button>
         </a>
-        <button class="but2" onclick="navigate('covid')">Learn More</button>
+        <button class="but2" onclick="getcovid()">Learn More</button>
+        <form action="/Covid-19" method="get" id="learnmoreform"></form>
       </div>
     </div>
   </div>
@@ -167,7 +168,8 @@
     </div>
 
     <span class="py-4 pb-5 d-flex justify-content-center">
-      <button class="but3">Learn More</button>
+      <button class="but3" onclick="getstatistics()">Learn More</button>
+      <form action="/Statistics" method="get" id="learnmorestats"></form>
     </span>
   </div>
 
@@ -195,7 +197,8 @@
     </div>
 
     <span class="py-4 pb-5 d-flex justify-content-center">
-      <button class="but3">Learn More</button>
+      <button class="but3" onclick="getvaccination()">Learn More</button>
+      <form action="/Vaccination" method="get" id="learnmorevaccination"></form>
     </span>
 
   </div>

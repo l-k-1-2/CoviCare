@@ -233,8 +233,17 @@ async function calldata(url) {
         });
 }
 
-
-
-
 calldata(url);
 
+function getcovid() {
+    document.getElementById('learnmoreform').submit();
+}
+
+function getstatistics() {
+    document.getElementById('learnmorestats').submit();
+}
+
+function getvaccination() {
+    document.getElementById('learnmorevaccination').submit();
+
+}

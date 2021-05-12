@@ -15,7 +15,7 @@ body{
 .navbar-brand{
     color: black;
     padding-left: 8.5%;
-    font-size: 2rem;
+    font-size: 2rem !important;
     text-decoration: none;
 }
 .navbar-brand:hover{

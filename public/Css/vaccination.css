@@ -21,7 +21,7 @@ body{
 .navbar-brand{
     color: black;
     padding-left: 8.5%;
-    font-size: 2rem;
+    font-size: 1.5rem !important;
     text-decoration: none;
 }
 .navbar-brand:hover{
@@ -68,12 +68,14 @@ h1{
     border: none !important;
     text-align: center;
 }
-#cowin .card-text{
-    font-size: small;
-}
 #cowin .card-title{
     padding-top: 2%;
     font-weight: 650;
+    font-size: 1.2rem;
+    margin: 7px 0 5px 0;
+}
+#cowin .card-text{
+    font-size: 1rem;
 }
 .icon{
     height: 40%;
@@ -86,6 +88,12 @@ h1{
     color: white;
     padding: 8px 35px 8px 35px;
     font-size: 1.2rem;
+}
+.but1:hover{
+    background-color: #BCFFF8;
+    color: #2D3391;
+    border: 2px solid #2D3391;
+    transition: 0.3s;
 }
 
 h2{
@@ -116,16 +124,28 @@ h2{
     color:#2D3391;
 }
 
+#vaccine_details .card-text{
+    text-align: left;
+}
+
 #Vaccine_precaution .card-title{
     text-align: center;
     font-size: 1.5rem;
 }
+
 .but2{
     background: #8EF4E9;
     box-shadow: 0px 14px 30px rgba(145, 210, 203, 0.38);
     border-radius: 5px;
     border: none;
     padding: 8px 18px 8px 18px;
+    margin-bottom: 5%;
+}
+
+.but2:hover{
+    background-color: #2D3391;
+    color: white;
+    transition: 0.3s;
 }
 
 .but3{

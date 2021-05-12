@@ -33,7 +33,7 @@ h1{
 .navbar-brand{
     color: black;
     padding-left: 8.5%;
-    font-size: 2rem;
+    font-size: 2rem !important;
     text-decoration: none;
 }
 .navbar-brand:hover{
@@ -127,14 +127,14 @@ h1{
 
 
 .but3{
-    background: #FFFFFF;
+    background: #8EF4E9;
     box-shadow: 0px 6px 20px 1px rgba(113, 181, 182, 0.48);
     height: 3rem;
     width: 9rem;
     border: none;
-    font-size: large;
-    letter-spacing: 1px;
+    font-size: 1.2rem;
     color: #2D3391;
+    border-radius: 5px;
 }
 
 .but3:hover{

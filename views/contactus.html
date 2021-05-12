@@ -83,7 +83,7 @@
       </div>
       <br>
       <div class="d-flex justify-content-center">
-        <button class="but1" type="submit">Submit</button>
+        <button class="but1" type="button" onclick="validate()">Submit</button>
       </div>
     </form>
 
@@ -114,33 +114,7 @@
     </div>
   </footer>
 
-  <script>
-    var typingTimer;
-    var doneTypingInterval = 1500;
-
-    $('#email').keyup(function () {
-      clearTimeout(typingTimer);
-      if ($('#email').val()) {
-        typingTimer = setTimeout(doneTyping, doneTypingInterval);
-      }
-    });
-
-    function doneTyping() {
-      var e = document.getElementById('email');
-      var x=e.value;
-      var atpos = x.indexOf("@");
-      var dotpos = x.lastIndexOf(".");
-      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-        e.setAttribute("class","form-control is-invalid")
-        return false;
-      }
-      else
-      {
-        e.setAttribute("class","form-control is-valid");
-      }
-    }
-
-  </script>
+  <script src="/JS/contactus.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ body{
 .navbar-brand{
     color: black;
     padding-left: 8.5%;
-    font-size: 2rem;
+    font-size: 2rem !important;
     text-decoration: none;
 }
 .navbar-brand:hover{
@@ -61,14 +61,14 @@ h1{
     margin-left: 25%;
 }
 .but1{
-    background: #FFFFFF;
+    background: #8EF4E9;
     box-shadow: 2px 9px 40px -3px rgba(113, 181, 182, 0.48);
     height: 3.2rem;
     width: 17rem;
     border: none;
+    border-radius: 5px;
     font-weight: 500;
-    font-size: 22px;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
     color: #2D3391;
 }
 

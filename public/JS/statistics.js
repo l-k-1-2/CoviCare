@@ -23,7 +23,7 @@ async function calldata(url) {
     const graphdata = {
         labels: datelabels,
         datasets: [{
-                label: 'Deceased',
+                label: 'Total Cases',
                 data: total_confirmed,
                 borderColor: '#D53E43',
                 backgroundColor: "#D53E43"
@@ -84,16 +84,23 @@ async function calldata(url) {
     
     var len=data.statewise.length;
     var statewise=data.statewise;
-    for(var i=1;i<len-1;i++)
+
+    console.log(statewise);
+    for(var i=1;i<len;i++)
     {
-        var tr=document.createElement('tr');
-        tr.innerHTML=`
-        <td>`+statewise[i].state+`</td>
-        <td>`+statewise[i].confirmed+`</td>
-        <td>`+statewise[i].active+`</td>
-        <td>`+statewise[i].recovered+`</td>
-        <td>`+statewise[i].deaths+`</td>`
-        table.appendChild(tr);
+        if(i!=31)
+        {
+            var tr=document.createElement('tr');
+            tr.innerHTML=`
+            <td>`+statewise[i].state+`</td>
+            <td>`+statewise[i].confirmed+`</td>
+            <td>`+statewise[i].active+`</td>
+            <td>`+statewise[i].recovered+`</td>
+            <td>`+statewise[i].deaths+`</td>`
+            table.appendChild(tr);
+        }
+        else
+        continue;
     }
     document.getElementById('table').appendChild(table);
 

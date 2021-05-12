@@ -212,7 +212,6 @@ app.post('/confirm',async(req,res)=>{
 // const port = 3000;
 
 // use alternate localhost and the port Heroku assigns to $PORT
-const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
+
 
 app.listen(process.env.PORT || 5000)

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoviCare-Covid-19</title>
+
+    <link rel="stylesheet" href="/Css/covid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/c3c2ece58a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+
+<body>
+
+    <!-- -------NAVBAR-------- -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/">Covi<span>Care</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Covid-19
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/Covid-19">About Covid-19</a>
+                      <a class="dropdown-item" href="/Statistics">Statistics</a>
+                      <a class="dropdown-item" href="/Vaccination">Vaccination</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Donations">Donations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Emergency-Contacts">Emergency Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contact-Us">Contact us</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+
+    <!-- ------LANDING SCREEN----- -->
+    <div id="landing" class="container-fluid mt-5"></div>
+
+
+    <!-- -----------Covid-19--------------- -->
+    <div class="container-fluid mt-2 mb-5" id="covid_19">
+        <h1>Covid-19</h1>
+        <div class="row my-5">
+            <div class="col-2 ml-3 mr-1">
+                <img src="/Images/stamp.png" id="stamp">
+            </div>
+
+            <div class="col-7 pl-5">
+                <p>
+                    Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                    Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness
+                    and recover without requiring special treatment. Older people, and those with underlying medical
+                    problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more
+                    likely to develop serious illness.
+                    <br><br>
+                    The virus that causes COVID-19 is a type of coronavirus, Coronaviridae, a large family of viruses.
+                    Coronaviruses are named for the crown-like spikes on their surfaces. Scientists monitor changes in
+                    the virus, including changes to the spikes on the surface of the virus. These studies, including
+                    genetic analyses of the virus, are helping scientists understand how changes to the virus might
+                    affect how it spreads and what happens to people who are infected with it. Multiple variants of the
+                    virus that causes COVID-19 are circulating globally at an alarming rate.
+                    <br><br>
+                    The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus,
+                    the disease it causes and how it spreads. Protect yourself and others from infection by washing your
+                    hands or using an alcohol based rub frequently and not touching your face. The COVID-19 virus
+                    spreads primarily through droplets of saliva or discharge from the nose when an infected person
+                    coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by
+                    coughing into a flexed elbow).
+                </p>
+            </div>
+
+            <div class="col-2">
+                <img src="/Images/earth.png" id="earth">
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------Symptoms------------------ -->
+    <div class="container-fluid mt-2 mb-5" id="symptoms">
+        <h1>Symptoms</h1>
+        <h6 class="my-5">COVID-19 affects different people in different ways. Most infected people will develop mild to
+            moderate <br> illness and recover without hospitalization.</h6>
+
+        <div class="row">   
+            <div class="col-1"></div>
+            <div class="col-3 card">
+                <div class="card-body">
+                  <h5 class="card-title">Less Common Symptoms</h5>
+                  <hr>
+                  <p class="card-text">
+                      <ul>
+                        <li>Sore Throat</li>
+                        <li>Sore throat</li>
+                        <li>Diarrhoea</li> 
+                        <li>Conjunctivitis</li>
+                        <li>Headache</li>    
+                        <li>Loss of taste or smell</li>    
+                        <li>A rash on skin, or discolouration of fingers or toes</li> 
+                      </ul>
+                  </p>
+                </div>
+            </div>
+            <div class="col-3 card">
+                <div class="card-body">
+                  <h5 class="card-title"><span>Most Common Symptoms</span></h5>
+                  <hr>
+                  <p class="card-text">
+                      <ul>
+                        <li>Fever</li>
+                        <li>Dry cough</li>
+                        <li>Tiredness</li>
+                        <li>Loss of appetite</li>
+                        <li>Fatigue</li>
+                        <li>Body aches</li>
+                      </ul>
+                  </p>
+                </div>
+            </div>
+            <div class="col-3 card">
+                <div class="card-body">
+                  <h5 class="card-title">Serious Symptoms</h5>
+                  <hr>
+                  <p class="card-text">
+                      <ul>
+                        <li>Difficulty breathing </li>
+                        <li> Shortness of breath</li>
+                        <li>Chest pain or pressure</li>
+                        <li>Loss of speech or movement</li>
+                      </ul>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <h6 class="my-5">
+            <p>
+                Seek immediate medical attention if you have serious symptoms.  Always call before visiting your doctor <br> or health facility. People with mild symptoms who are otherwise healthy should manage their symptoms <br> at home. On average it takes 5–6 days from when someone is infected with the virus for symptoms to 
+                <br> show, however it can take up to 14 days. 
+            </p>
+        </h6>
+    </div>
+
+    <!-- ------------Precautions------------- -->
+
+    <div id="precautions" class="container-fluid my-5">
+        <h1>Precautions</h1>
+        <h5 class="d-flex justify-content-center mt-5">To prevent infection and to slow transmission of COVID-19, do the following :</h5>
+        <hr class="mb-4" style="width: 50%;">
+        <div class="d-flex justify-content-center">
+            <ul>
+                <li>Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.</li>
+                <li>Maintain at least 1 metre distance between you and people coughing or sneezing.</li>
+                <li>Avoid touching your face.</li>
+                <li>Cover your mouth and nose when coughing or sneezing.</li>
+                <li>Stay home if you feel unwell.</li>
+                <li>Refrain from smoking and other activities that weaken the lungs.</li>
+                <li>Practice physical distancing by avoiding unnecessary travel and staying away from large <br> groups of people.</li>
+            </ul>
+        </div>
+        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank" class="link d-flex justify-content-center my-5">
+             <button class="but1">Learn more about precautions</button>
+        </a>
+    </div>
+
+    <div>
+        <a href="#landing"><button class="but2">Back to Top</button></a>
+    </div>
+</body>
+
+</html>

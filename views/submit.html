@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Css/submit.css">
+</head>
+
+<body>
+    <div class="text">
+        <h1>
+            Your Form has been submitted succesfully.
+        </h1>
+        <p>Thank you for registering with us, we will get back to you soon.</p>
+        <div><img src="/Images/submit.png"></div>
+        <p id="redirect">This page will be redirected in : </p>
+    </div>
+    <p>
+        <form id="jsform" action="/" method="GET"></form>
+    </p>
+
+    <script>
+        var count=5;
+        async function countDown() {
+            if(count>0)
+            {
+                document.getElementById("redirect").innerHTML =await "This page will redirect in " + count + " seconds....";
+                await count--;
+                setTimeout("countDown()", 1000);
+            }
+            else {
+                document.getElementById('jsform').submit();
+            }
+        }
+        countDown();
+    </script>
+</body>
+
+</html>

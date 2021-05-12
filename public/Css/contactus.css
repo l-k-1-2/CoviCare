@@ -1,0 +1,109 @@
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* ------------- navbar --------------------------------*/
+
+.navbar{
+    background-color: #EFF9F9;
+}
+.nav-link,.dropdown-item{
+    color: #2D3391;
+    font-size: 1.2rem;
+}
+
+.navbar-brand{
+    color: black;
+    padding-left: 8.5%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.navbar-brand span{
+    color: #2D3391;
+}
+.navbar-nav{
+    padding-right: 8.5%;
+}
+
+/* --------------- navbar end ---------------------------*/
+
+/* ----------------------Image div------------------------- */
+
+.image{
+    height: 750px;
+    background-image: url("../Images/contact.png");
+    background-size: cover;
+}
+
+
+/* ----------------------Image div Ends------------------------- */
+
+
+/* -------------------Form------------------------- */
+#form{
+    width: 100%;
+}
+#form input{
+    width: 60%;
+    height: 45px;
+    border: 2px solid #6DBCC1;
+    border-radius: 5px;
+}
+
+#form textarea{
+    width: 60%;
+    border: 2px solid #6DBCC1;
+    border-radius: 5px;   
+}
+
+.is-invalid{
+    border: 2px solid #D53E43 !important;
+}
+
+.is-valid{
+    border: 2px solid #03AD5C !important;
+}
+.but1{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 25px 1px rgba(113, 181, 182, 0.48);
+    height: 3rem;
+    width: 9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: large;
+    letter-spacing: 1px;
+    color: #2D3391;
+}
+
+.but1:hover{
+    background: #2D3391;
+    box-shadow: 0px 11px 25px 5px rgba(45, 51, 145, 0.22);
+    color: white;
+    transition:0.3s;
+}
+/* -------------------Form Ends------------------------- */
+
+
+/* -----------------------FOOTER---------------------- */
+#footer{
+    margin-top: 5%;
+    background-color: #0F3057;
+    ;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    color: white;
+}
+
+#footer .col-3 a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer .col-3 a:hover{
+    color: none;
+}
+
+/* -------------------------FOOTER Ends-------------------- */

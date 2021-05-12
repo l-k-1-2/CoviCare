@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* ------------- navbar --------------------------------*/
+body{
+    font-family: 'Roboto','sans-serif' !important;
+}
+.navbar{
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    background-color: #EFF9F9;
+}
+.nav-link,.dropdown-item{
+    color: #2D3391;
+    font-size: 1.2rem;
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.navbar-brand{
+    color: black;
+    padding-left: 8.5%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.navbar-brand span{
+    color: #2D3391;
+}
+.navbar-nav{
+    padding-right: 8.5%;
+}
+
+h1{
+    text-align: center;
+    padding-top: 10%;
+    color: #2D3391;
+}
+
+#form input{
+    border: 2px solid #6DBCC1;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#form input::placeholder{
+    color: #A1A1A1;
+}
+
+.form-group{
+    padding-top: 3%;
+}
+.but1{
+    background-color: #A3FFF5;
+    color: #2D3391;
+    border: none;
+    padding: 8px 45px 8px 45px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}

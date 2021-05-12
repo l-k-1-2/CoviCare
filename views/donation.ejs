@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoviCare-Donations</title>
+
+    <link rel="stylesheet" href="/Css/donation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/c3c2ece58a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+</head>
+
+<body>
+    <!-- -------NAVBAR-------- -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/">Covi<span>Care</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Covid-19
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/Covid-19">About Covid-19</a>
+                      <a class="dropdown-item" href="/Statistics">Statistics</a>
+                      <a class="dropdown-item" href="/Vaccination">Vaccination</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Donations">Donations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Emergency-Contacts">Emergency Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contact-Us">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ------LANDING SCREEN----- -->
+    <div id="landing" class="container-fluid mt-5"></div>
+
+    <!-- ----------------PM-Cares------------- -->
+    <h1 class="mt-3">PM Cares Fund</h1>
+    <div class="container-fluid mb-5" id="pmcares">
+        <h6 class="mt-5">Prime Minister’s Citizen Assisstance and Reilief in Emergency Situations Fund <br>
+            (PM CARES Fund)</h6>
+        <br>
+        <p style="font-weight: 400;">Visit the website pmindia.gov.in and donate to the PM CARES Fund using the
+            following details : </p>
+        <br>
+        <div class="details">
+
+        </div>
+        <br>
+        <a href="https://www.pmcares.gov.in/en" target="_blank"><button class="but1">Visit the Website</button></a>
+    </div>
+    
+    <!-- -------------------NGO Info---------------------- -->
+    <main>
+    <h1>List of NGO's looking for Volunteers</h1>
+    <div class="container-fluid my-5" id="ngo">
+        
+        <% var len,i,j=0;
+        if(size%2==0)
+        len=size/2;
+        else
+        len=size/2; 
+        
+        for(i=0;i<len;i++) 
+        { 
+            var temp=array[j]; %>
+
+        <div class="row mb-3 mt-5">
+
+            <div class="col-1"></div>
+
+            <div class="col-4 card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= temp.Name %></h5>
+                    <p class="card-text">
+                        <span>Address:</span> Vit,Vellore <br>
+                        <span>Phone:</span> +91 1234567890 <br>
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a target="blank_" href="https://www.google.com"><i class="icon fas fa-globe"></i></a>
+                        <a target="blank_" href="https://instagram.com"><i class="icon fab fa-instagram"></i></a>
+                        <a target="blank_" href="https://facebook.com"><i class="icon fab fa-facebook-square"></i></a>
+                        <a target="blank_" href=""><i class="icon fas fa-map-marker-alt"></i></a>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-around">
+                        <form action="/volunteer/<%=temp.Name%>" style="width: fit-content;"><button type="submit" class="but3">Volunteer</button></form>
+                    </div>
+                </div>
+            </div>
+            <% j++; 
+            if(j<size){
+            temp=array[j];
+            %>
+            <div class="col-1"></div>
+
+            <div class="col-4 card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= temp.Name %></h5>
+                    <p class="card-text">
+                        <span>Address:</span> Vit,Vellore <br>
+                        <span>Phone:</span> +91 1234567890 <br>
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a target="blank_" href=""><i class="icon fas fa-globe"></i></a>
+                        <a target="blank_" href="https://instagram.com"><i class="icon fab fa-instagram"></i></a>
+                        <a target="blank_" href="https://facebook.com"><i class="icon fab fa-facebook-square"></i></a>
+                        <a target="blank_" href=""><i class="icon fas fa-map-marker-alt"></i></a>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-around">
+                        <form action="/volunteer/<%=temp.Name%>" style="width: fit-content;"><button type="submit" class="but3">Volunteer</button></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%j++;
+        }}%>
+    </div>
+    </main>
+
+
+
+    <div>
+        <a href="#landing"><button class="but2">Back to Top</button></a>
+    </div>
+</body>
+
+</html>

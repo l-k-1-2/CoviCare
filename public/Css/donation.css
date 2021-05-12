@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* ------------- navbar --------------------------------*/
+body{
+    font-family: 'Roboto','sans-serif' !important;
+}
+.navbar{
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    background-color: #EFF9F9;
+}
+.nav-link,.dropdown-item{
+    color: #2D3391;
+    font-size: 1.2rem;
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.navbar-brand{
+    color: black;
+    padding-left: 8.5%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.navbar-brand span{
+    color: #2D3391;
+}
+.navbar-nav{
+    padding-right: 8.5%;
+}
+
+
+/* ----------------landing screen------------------ */
+#landing{
+    background-image: url("../Images/Donations.png");
+    background-size: cover;
+    height: 98.5vh;
+}
+
+/* ---------------PMCARES--------------------- */
+h1{
+    text-align: center;
+    padding: 1.5%;
+    color: #2D3391;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 25px 4px rgba(113, 181, 182, 0.23);
+}
+
+#pmcares{
+    text-align: center;
+}
+
+.details{
+    background-image: url("../Images/card.png");
+    background-repeat: no-repeat;
+    /* width: 32.5%; */
+    height: 42vh;
+    margin-left: 25%;
+}
+.but1{
+    background: #FFFFFF;
+    box-shadow: 2px 9px 40px -3px rgba(113, 181, 182, 0.48);
+    height: 3.2rem;
+    width: 17rem;
+    border: none;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #2D3391;
+}
+
+.but1:hover{
+    background: #2D3391;
+    box-shadow: 0px 11px 25px 5px rgba(45, 51, 145, 0.22);
+    color: white;
+    transition:0.3s;
+}
+
+/* -------------------NGO---------------------- */
+
+#ngo{
+    padding-left: 10%;
+}
+
+.card{
+    background: #FFFFFF;
+box-shadow: 0px 10px 15px -11px rgba(113, 181, 182, 0.57);
+border: none;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 20pt;
+    color: #2D3391;
+}
+
+.card-text{
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+.icon{
+    font-size: 1.7rem;
+    padding: 5px;
+    color: #2D3391;
+}
+a{
+    color: black;
+}
+
+.but3{
+    border:2px solid #2D3391;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #2D3391;
+    padding: 3px 25px 3px 25px;
+}
+
+.but3:hover{
+    background-color: #2D3391;
+    color: #FFFFFF;
+    transition:0.3s;
+    border: none;
+}
+
+.but2{
+    background: #2D3391;
+    width: 100%;
+    height: 4rem;
+    color: #FFFFFF;
+}

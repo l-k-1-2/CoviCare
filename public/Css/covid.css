@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* ------------- navbar --------------------------------*/
+
+.navbar{
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    background-color: #EFF9F9;
+}
+.nav-link,.dropdown-item{
+    color: #2D3391;
+    font-size: 1.2rem;
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.navbar-brand{
+    color: black;
+    padding-left: 8.5%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.navbar-brand span{
+    color: #2D3391;
+}
+.navbar-nav{
+    padding-right: 8.5%;
+}
+
+/* ------------------landing screen  --------------------*/
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+#landing{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: linear-gradient(rgba(45, 51, 145, 0.25),rgba(45, 51, 145, 0.25)) , url("../Images/mask1.jpg");
+    height: 45.5rem;
+}
+
+
+/* ----------------Covid-19-------------------- */
+
+
+h1{
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    color: #2D3391;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 25px 4px rgba(113, 181, 182, 0.23);
+    font-family: 'Roboto','sans-serif';
+}
+
+#covid_19 .row{
+    padding-top: 1.5%;
+}
+.col-7{
+    font-family: 'Product Sans';
+    font-size: 18px;
+    letter-spacing: 0.04em;
+}
+#stamp{
+    width: 15rem;
+    transform: rotate(-8.83deg);
+}
+
+#earth{
+    margin-top: 26rem;
+    width: 14rem;
+}
+
+/* ----------------Symptoms------------- */
+h6{
+    text-align: center;
+}
+
+.col-3{
+    margin-right: 2%;
+}
+
+.card-title{
+    text-align: center;
+    font-weight: 500;
+}
+h5 span{
+    color: #2D3391;
+}
+
+ul{
+    font-family: 'Product Sans';
+    font-size: 16px;
+    letter-spacing: 0.04em;
+}
+
+/* -------------Precautions-------------- */
+h6 p{
+    margin-left: 25%;
+    text-align: left;
+}
+
+.but1{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 25px 1px rgba(113, 181, 182, 0.48);
+    height: 3rem;
+    width: 22rem;
+    border: none;
+    color: #2D3391;
+    font-family: 'Roboto','sans-serif';
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.but1:hover{
+    background: #2D3391;
+    box-shadow: 0px 11px 25px 5px rgba(45, 51, 145, 0.22);
+    color: white;
+    transition:0.3s;
+}
+
+.but2{
+    background: #2D3391;
+    width: 100%;
+    height: 4rem;
+    color: #FFFFFF;
+}
+
+.link:hover{
+    color:#2D3391;
+    text-decoration: none;
+}

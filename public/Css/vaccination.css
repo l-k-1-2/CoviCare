@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
+/* ------------- navbar --------------------------------*/
+
+.navbar{
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    background-color: #EFF9F9;
+}
+.nav-link,.dropdown-item{
+    color: #2D3391;
+    font-size: 1.2rem;
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.navbar-brand{
+    color: black;
+    padding-left: 8.5%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.navbar-brand span{
+    color: #2D3391;
+}
+.navbar-nav{
+    padding-right: 8.5%;
+}
+
+/* --------------- navbar end ---------------------------*/
+
+/* -------------------Landing Screen-------------------  */
+h1{
+    text-align: center;
+    padding: 1.5%;
+    color: #2D3391;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px 4px rgba(113, 181, 182, 0.23);
+}
+
+#landing{
+    background-image: url("../Images/vaccination.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+}
+
+/* --------------Registration--------------- */
+#cowin{
+    background-color: #BCFFF8;
+}
+.heading{
+    text-align: center;
+    color: #2D3391;
+    font-weight: 600;
+    font-size:2rem;
+    padding: 2.5% 0 0.5%;
+}
+#vaccine_details .card,#cowin .card,.numbers .card{
+    background-color: transparent !important;
+    border: none !important;
+    text-align: center;
+}
+#cowin .card-text{
+    font-size: small;
+}
+#cowin .card-title{
+    padding-top: 2%;
+    font-weight: 650;
+}
+.icon{
+    height: 40%;
+}
+.but1{
+    background: #2D3391;
+    box-shadow: 0px 14px 40px rgba(45, 51, 145, 0.22);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 8px 35px 8px 35px;
+    font-size: 1.2rem;
+}
+
+h2{
+    text-align: center;
+    color: #2D3391;
+}
+
+.numbers .card{
+    box-shadow: 3px 6px 13px rgba(113, 181, 182, 0.23);
+
+}
+
+.numbers .card-title{
+    font-size: 1.3rem;
+    padding-top: 5%;
+}
+.num{
+    font-size: 1.4rem;
+    color: #2D3391;
+    font-weight: 600;
+}
+    
+/* ---------------Vaccine Details------------------- */
+#vaccine_details .card,#Vaccine_precaution .card{
+    box-shadow: -3px 14px 28px rgba(68, 135, 136, 0.23);
+}
+#vaccine_details .card-title,#Vaccine_precaution .card-title{
+    color:#2D3391;
+}
+
+#Vaccine_precaution .card-title{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.but2{
+    background: #8EF4E9;
+    box-shadow: 0px 14px 30px rgba(145, 210, 203, 0.38);
+    border-radius: 5px;
+    border: none;
+    padding: 8px 18px 8px 18px;
+}
+
+.but3{
+    background: #2D3391;
+    width: 100%;
+    height: 4rem;
+    color: #FFFFFF;
+}

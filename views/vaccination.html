@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoviCare-Vaccination</title>
+
+    <link rel="stylesheet" href="/Css/vaccination.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/c3c2ece58a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"
+        integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/">Covi<span>Care</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Covid-19
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Covid-19">About Covid-19</a>
+                        <a class="dropdown-item" href="/Statistics">Statistics</a>
+                        <a class="dropdown-item" href="/Vaccination">Vaccination</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Donations">Donations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Emergency-Contacts">Emergency Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contact-Us">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- --------------------Landing Screen-------------- -->
+    <div id="landing" class="container-fluid mb-5"></div>
+
+    <!-- ----------------------Registration-------------------- -->
+    <h1>Vaccine Registration</h1>
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="text1 col-lg-8 my-5 ">
+            <p>According to the operational guidelines for Covid-19 vaccination prepared by the Ministry of Health: “The
+                system allows for creation of users (admins, supervisors, vaccinators), registration of beneficiaries
+                (bulk upload and individual registration), facilities/planning unit and session sites followed by
+                planning and scheduling sessions and implementation of vaccination.”
+                <br><br>
+                The guidelines add: “CoWIN system on a real time basis will track not only the beneficiaries but also
+                the vaccines, at national, state and district level. This will allow the system to monitor the
+                utilisation, wastage, coverage of Covid-19 vaccination at national, state, district and sub-district
+                level.”</p>
+        </div>
+    </div>
+    <div class="container-fluid mb-5" id="cowin">
+        <p class="heading">How to register for it ?</p>
+        <div class="row d-flex justify-content-center">
+            <div class="card col-lg-2">
+                <div class="card-body">
+                    <img class="icon" src="/Images/icon1.png" alt="">
+                    <p class="card-title">Register yourself</p>
+                    <p class="card-text">Register using your mobile no. or any other identity doc no.</p>
+                </div>
+            </div>
+            <div class="card col-lg-2">
+                <div class="card-body">
+                    <img class="icon" src="/Images/icon2.png" alt="">
+                    <p class="card-title">Choose Location</p>
+                    <p class="card-text">Select your nearby centre for vaccination</p>
+                </div>
+            </div>
+            <div class="card col-lg-2">
+                <div class="card-body">
+                    <img class="icon" src="/Images/icon3.png" alt="">
+                    <p class="card-title">Confirm Your Slot</p>
+                    <p class="card-text">Book your slot for the vaccine</p>
+                </div>
+            </div>
+            <div class="card col-lg-2">
+                <div class="card-body">
+                    <img class="icon" src="/Images/icon4.png" alt="">
+                    <p class="card-title">Any Questions ?</p>
+                    <p class="card-text">Ask us or visit the website for more details</p>
+                </div>
+            </div>
+        </div>
+        <div class="pb-5" style="text-align: center;">
+            <a href="https://www.cowin.gov.in/home" target="_blank"><button class="but1">Visit the Website</button></a>
+        </div>
+    </div>
+
+    <div class="numbers container-fluid">
+        <h2>Current numbers of Vaccination</h2>
+        <div class="row my-5 d-flex justify-content-center">
+            <div class="col-lg-3 card">
+                <div class="card-text">
+                    <p class="card-title">Total Vaccinated</p>
+                    <p class="num" id="total_vaccinated"></p>
+                </div>
+            </div>
+            <div class="offset-lg-1 col-lg-3 card">
+                <div class="card-text">
+                    <p class="card-title">New Vaccinated (per million)</p>
+                    <p class="num" id="new_vaccinated_per_mil"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 d-flex justify-content-center">
+            <div class="col-lg-3 card">
+                <div class="card-text">
+                    <p class="card-title">People Vaccinated (1 dose)</p>
+                    <p class="num" id="single_dose"></p>
+                </div>
+            </div>
+            <div class="offset-lg-1 col-lg-3 card">
+                <div class="card-text">
+                    <p class="card-title">People Fully Vaccinated</p>
+                    <p class="num" id="fully_vaccinated"></p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div><img src="/Images/docwithvaccine.png"></div>
+        </div>
+    </div>
+
+    <h1 class="my-5">Vaccine Details</h1>
+    <div class="container-fluid mb-5" id="vaccine_details">
+        <div class="d-flex justify-content-center my-5">
+            <div class="col-lg-7">
+                In order to respond quickly and effectively to the COVID-19 pandemic in India, a broad range of
+                candidate
+                COVID-19 vaccines are being investigated globally using various technologies and platforms. These
+                include
+                viral-vectored, protein subunit, nucleic acid (DNA, RNA), live attenuated and inactivated vaccines. Some
+                of
+                these candidates have entered clinical trials.
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card col-lg-3">
+                <div class="card-body">
+                    <h5 class="card-title">Covishield</h5>
+                    <hr>
+                    <p class="card-text">Covishield Content</p>
+                    <button class="but2">Learn More</button>
+                </div>
+            </div>
+            <div class="offset-lg-1 card col-lg-3">
+                <div class="card-body">
+                    <h5 class="card-title">Covaxin</h5>
+                    <hr>
+                    <p class="card-text">Content</p>
+                    <button class="but2">Learn More</button>
+                </div>
+            </div>
+            <div class="offset-lg-1 card col-lg-3">
+                <div class="card-body">
+                    <h5 class="card-title">Sputnik V</h5>
+                    <hr>
+                    <p class="card-text">Covishield Content</p>
+                    <button class="but2">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="my-5">Vaccine Precautions</h1>
+    <div class="container-fluid mb-5" id="Vaccine_precaution">
+        <div class="row d-flex justify-content-center">
+            <div class="card col-lg-5">
+                <div class="card-body">
+                    <h5 class="card-title">Before Vaccination</h5>
+                    <hr>
+                    <ul style="list-style-type:none;">
+                        <li>&#128073 In case a person has allergies to medication, or drugs, it is important to get an
+                            all-clear from a medical practitioner. A complete blood count (CBC), C-reactive protein
+                            (CRP), or Immunoglobulin-E (IgE) levels can be checked under medical advice.
+                        </li>
+                        <br>
+                        <li>
+
+                            &#128073 One should eat well and take medicines, if prescribed, ahead of vaccination. One
+                            should
+                            try to be as relaxed as possible; counselling can help people who are feeling anxious.
+                        </li>
+                        <br>
+                        <li>
+                            &#128073 People with diabetes or blood pressure need to keep these in check. Cancer
+                            patients,
+                            especially those on chemotherapy, must act on medical advice.
+                        </li>
+                        <br>
+                        <li>
+                            &#128073 People who have received blood plasma or monoclonal antibodies as part of Covid-19
+                            treatment, or those who have been infected in the last one and a half months are advised to
+                            not take the vaccine right now.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ml-5 card col-lg-5">
+                <div class="card-body">
+                    <h5 class="card-title">After Vaccination</h5>
+                    <hr>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            👉 A recipient of the vaccine is monitored at the vaccine centre itself to guard against any
+                            immediate severe allergic reaction. People are allowed to leave only after it has been
+                            ascertained that this is not the case.
+                        </li>
+                        <br>
+                        <li>
+                            👉 Side effects like pain at the injection site and fever are common. This is no reason to
+                            panic. Some other side effects like chills and fatigue might also be expected, but these go
+                            away in a few days.
+
+                        </li>
+                        <br>
+                        <li>
+                            👉 Vaccines teach our immune system how to recognise and fight an external threat — in this
+                            case, the virus that causes Covid-19. It typically takes a few weeks after vaccination for
+                            the body to build protection (immunity) against the virus.
+
+                        </li>
+                        <br>
+                        <li>
+                            👉 This means that a person could still get infected by Covid-19 in the few days immediately
+                            following the vaccination, because the person would not have had enough time to develop
+                            immunity. Therefore, basic precautionary measures must be followed even after vaccination.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a href="#landing"><button class="but3">Back to Top</button></a>
+    </div>
+
+    <script src="/JS/vaccination.js"></script>
+</body>
+
+</html>

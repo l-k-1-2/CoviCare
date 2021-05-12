@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1{
+    text-align: center;
+    padding: 1.5%;
+    color: #2D3391;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px 4px rgba(113, 181, 182, 0.23);
+}
+
+/* ------------- navbar --------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* ------------- navbar --------------------------------*/
+
+.navbar{
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    background-color: #EFF9F9;
+}
+.nav-link,.dropdown-item{
+    color: #2D3391;
+    font-size: 1.2rem;
+    font-family: 'Roboto','sans-serif';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.navbar-brand{
+    color: black;
+    padding-left: 8.5%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.navbar-brand span{
+    color: #2D3391;
+}
+.navbar-nav{
+    padding-right: 8.5%;
+}
+
+
+/* --------------- navbar end ---------------------------*/
+
+
+/* ------------------landing screen  --------------------*/
+#landing{
+    background-image: linear-gradient(rgba(45, 51, 145, 0.25),rgba(45, 51, 145, 0.25)) , url("../Images/corona.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 93.6vh;
+    padding-top: 5%;
+}
+
+#landing h1{
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    text-align: left;
+    color: #8EF4E9;
+    font-size: 60pt;
+}
+#landing h1 span{
+    color: white;
+}
+#landing .row{
+    padding-top: 5%;
+}
+.text{
+    color: white;
+    padding-left: 5%;
+}
+.text span{
+    color: #8EF4E9;
+}
+.span1{
+    padding-left: 20%;
+}
+#landing button{
+    height: 2.7rem;
+    width: 9rem;
+}
+.but1{
+    background-color: #8EF4E9;
+    box-shadow: 0px 17px 22px -8px rgba(145, 210, 203, 0.38);
+    border-radius: 3px;
+    border: none;
+    color: #2D3391;
+}
+.but1:hover{
+    background-color: transparent;
+    color: #EFF9F9;
+    border: 3px solid #EFF9F9;  
+    box-sizing: border-box;
+    transition:0.3s;
+    box-shadow: none;
+}
+.but2
+{
+    background-color: transparent;
+    color: #EFF9F9;
+    border: 3px solid #EFF9F9;  
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 10%;
+}
+.but2:hover{
+    background-color: #8EF4E9;
+    box-shadow: 0px 17px 22px -8px rgba(145, 210, 203, 0.38);
+    transition:0.3s;
+    color: #2D3391;
+    border: none;
+}
+
+/* ------------------------ landing screen End --------------------------*/
+
+
+
+/* ------------------------- Graphs -------------------------------------*/
+
+
+.but3{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 20px 1px rgba(113, 181, 182, 0.48);
+    height: 3rem;
+    width: 9rem;
+    border: none;
+    font-size: large;
+    letter-spacing: 1px;
+    color: #2D3391;
+}
+
+.but3:hover{
+    background: #2D3391;
+    box-shadow: 0px 8px 25px 5px rgba(45, 51, 145, 0.22);
+    color: white;
+    transition:0.3s;
+}
+
+
+
+
+/* ------------------------- Graphs end ----------------------------------*/
+
+/* ----------------------------Vaccination ---------------------------------- */
+
+
+#vaccination .card{
+    box-shadow: 0px 14px 30px 3px rgba(113, 181, 182, 0.23);
+    height: 10vw;
+}
+
+/* ------------------------------Vaccination Ends-------------------------- */
+
+/* ---------------------------FAQ----------------------------- */
+
+.btn{
+
+    font-size: 1.1rem;
+}
+#faq .icon{
+    font-size: 1.5 rem;
+    /* margin-left: 28%; */
+}
+
+/* ------------------------FAQ Ends------------------- */
+
+/* -----------------------FOOTER---------------------- */
+#footer{
+    background-color: #0F3057;
+    ;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    color: white;
+}
+
+#footer .col-3 a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer .col-3 a:hover{
+    color: none;
+}
+
+/* -------------------------FOOTER Ends-------------------- */

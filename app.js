@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 const {MongoClient}= require('mongodb');
+const uri = "mongodb+srv://mydatabase:mydatabase@cluster0.ozajz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 app.use('/', express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({
@@ -9,25 +10,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.set('view engine', 'ejs');
 
+
 var results, len, id,obj;
 
-
-
 async function main(collection) {
-
-    const uri = "mongodb+srv://mydatabase:mydatabase@cluster0.ozajz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
     const client = new MongoClient(uri);
-
-
     try {
         await client.connect();
-
-        // Make the appropriate DB calls
-        //await createListing(client, val);
         const cursor = client.db("CoviCare").collection(collection).find();
         results = await cursor.toArray();
-        // console.log(results);
         len = results.length;
 
     } catch (e) {
@@ -39,16 +30,16 @@ async function main(collection) {
 
 async function createListing(newListing, collection) {
     // See https://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#insertOne for the insertOne() docs
-    const uri = "mongodb+srv://mydatabase:mydatabase@cluster0.ozajz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
 
     try {
         await client.connect();
-        // Make the appropriate DB calls
+        const cursor = client.db("CoviCare").collection(collection).find();
+        results = await cursor.toArray();
+        console.log(results.length);
+        newListing._id = results.length;
         const result = await client.db("CoviCare").collection(collection).insertOne(newListing);
         console.log(`New listing created with the following id: ${result.insertedId}`);
-        //await createListing(client, val);
-        // console.log(results);
     } catch (e) {
         console.error(e);
     } finally {
@@ -58,15 +49,9 @@ async function createListing(newListing, collection) {
 }
 
 app.get('/', async function(req, res) {
-    
-    /*var url='https://firebasestorage.googleapis.com/v0/b/covicare-b2bc3.appspot.com/o/WhatsApp%20Image%202021-05-11%20at%209.06.04%20PM.jpeg?alt=media&token=553a7d2b-d40e-44ad-bd05-179acdddfb77';
-    var content='India to extend interval between Covishield vaccine doses to up to eight weeks.';
-    var val='{"url":"'+url+'","content":"'+content+'"}';
-    val=JSON.parse(val);*/
-    
     await main('Vaccination_Today');
 
-    res.render(__dirname+'/views/index.ejs',{
+    res.render(__dirname+'/views/home.ejs',{
         array: results,
         size: len
    });
@@ -86,19 +71,6 @@ app.get('/Vaccination', (req, res) => {
 })
 
 app.get('/Donations', async(req, res) => {
-
-
-    /*var name="Red Ribbon";
-    var add="Vit,Vellore";
-    var ph="+91 1234567890"
-    var web="https://google.com"; 
-    var insta="https://instagram.com";
-    var fb="https://facebook.com";
-    var map="https://google.com";
-    var val='{"Name":"'+name+'","Address":"'+add+'","Phone":"'+ph+'","Website":"'+web+'","Instagram":"'+insta+'","Facebook":"'+fb+'","Geolocation":"'+map+'"}';
-    val=JSON.parse(val);
-    var results;
-    console.log(val);*/
 
     await main('NGOs').catch(console.error);
 
@@ -129,7 +101,7 @@ obj={
     "Phone":""
 };
 var ngo;
-// obj=JSON.parse(obj);
+
 app.get('/volunteer/:a',async(req,res)=>{
     console.log(req.params.a);
 
@@ -142,22 +114,7 @@ app.get('/volunteer/:a',async(req,res)=>{
 
 app.post('/submit',async(req,res)=>{
     console.log(req.body);
-    const uri = "mongodb+srv://mydatabase:mydatabase@cluster0.ozajz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-    const client = new MongoClient(uri);
-    
-    try {
-        await client.connect();
-        // Make the appropriate DB calls
-        //await createListing(client, val);
-        const cursor = client.db("CoviCare").collection("Volunteers").find();
-        results = await cursor.toArray();
-        id = results.length;
-    } catch (e) {
-        id=0;
-        console.error(e);
-    } finally {
-        await client.close();
-    }
+
     obj._id=id;
     obj.NGO=ngo;
     obj.Name=req.body.Name; 
@@ -167,7 +124,8 @@ app.post('/submit',async(req,res)=>{
     obj.Phone=req.body.Phone;
     obj.Zipcode=req.body.Zipcode;
     obj.Email=req.body.Email;
-    createListing(obj,'Volunteers');
+
+    await createListing(obj,'Volunteers');
     res.sendFile(__dirname+'/views/submit.html');
 })
 
@@ -180,23 +138,6 @@ var response={
 
 app.post('/confirm',async(req,res)=>{
     console.log(req.body);
-    const uri = "mongodb+srv://mydatabase:mydatabase@cluster0.ozajz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-    const client = new MongoClient(uri);
-    
-    try {
-        await client.connect();
-        // Make the appropriate DB calls
-        //await createListing(client, val);
-        const cursor = client.db("CoviCare").collection("Responses").find();
-        results = await cursor.toArray();
-        id = results.length;
-        
-    } catch (e) {
-        id=0;
-        console.error(e);
-    } finally {
-        await client.close();
-    }
 
     response._id=id;
     response.Name=req.body.Name; 
@@ -206,12 +147,5 @@ app.post('/confirm',async(req,res)=>{
     createListing(response,'Responses');
     res.sendFile(__dirname+'/views/submit.html');
 })
-
-// port (as described above) and host are both wrong
-// const host = 'localhost';
-// const port = 3000;
-
-// use alternate localhost and the port Heroku assigns to $PORT
-
 
 app.listen(process.env.PORT || 5000)

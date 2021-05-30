@@ -103,14 +103,14 @@
                 <div class="card-body">
                     <h5 class="card-title"><%= temp.Name %></h5>
                     <p class="card-text">
-                        <span>Address:</span> Vit,Vellore <br>
-                        <span>Phone:</span> +91 1234567890 <br>
+                        <span>Address:</span> <%= temp.Address %> <br>
+                        <span>Phone:</span> <%= temp.Phone %> <br>
                     </p>
                     <div class="d-flex justify-content-center">
-                        <a target="blank_" href="https://www.google.com"><i class="icon fas fa-globe"></i></a>
-                        <a target="blank_" href="https://instagram.com"><i class="icon fab fa-instagram"></i></a>
-                        <a target="blank_" href="https://facebook.com"><i class="icon fab fa-facebook-square"></i></a>
-                        <a target="blank_" href=""><i class="icon fas fa-map-marker-alt"></i></a>
+                        <a target="blank_" href="<%=temp.Website%>"><i class="icon fas fa-globe"></i></a>
+                        <a target="blank_" href="<%=temp.Instagram%>"><i class="icon fab fa-instagram"></i></a>
+                        <a target="blank_" href="<%=temp.Facebook%>"><i class="icon fab fa-facebook-square"></i></a>
+                        <a target="blank_" href="<%=temp.Geolocation%>"><i class="icon fas fa-map-marker-alt"></i></a>
                     </div>
                     <br>
                     <div class="d-flex justify-content-around">
@@ -123,21 +123,21 @@
             if(j<size){
             temp=array[j];
             %>
-            
+
             <div class="col-1"></div>
 
             <div class="col-4 card">
                 <div class="card-body">
                     <h5 class="card-title"><%= temp.Name %></h5>
                     <p class="card-text">
-                        <span>Address:</span> Vit,Vellore <br>
-                        <span>Phone:</span> +91 1234567890 <br>
+                        <span>Address:</span> <%= temp.Address %>  <br>
+                        <span>Phone:</span> <%= temp.Phone %>  <br>
                     </p>
                     <div class="d-flex justify-content-center">
-                        <a target="blank_" href=""><i class="icon fas fa-globe"></i></a>
-                        <a target="blank_" href="https://instagram.com"><i class="icon fab fa-instagram"></i></a>
-                        <a target="blank_" href="https://facebook.com"><i class="icon fab fa-facebook-square"></i></a>
-                        <a target="blank_" href=""><i class="icon fas fa-map-marker-alt"></i></a>
+                        <a target="blank_" href="<%=temp.Website%>"><i class="icon fas fa-globe"></i></a>
+                        <a target="blank_" href="<%=temp.Instagram%>"><i class="icon fab fa-instagram"></i></a>
+                        <a target="blank_" href="<%=temp.Facebook%>"><i class="icon fab fa-facebook-square"></i></a>
+                        <a target="blank_" href="<%=temp.Geolocation%>"><i class="icon fas fa-map-marker-alt"></i></a>
                     </div>
                     <br>
                     <div class="d-flex justify-content-around">

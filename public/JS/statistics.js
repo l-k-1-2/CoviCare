@@ -64,16 +64,17 @@ async function calldata(url) {
 
     var ctx = document.getElementById('linechart').getContext('2d');
     var chart = new Chart(ctx, config)
+    
     var s = data.cases_time_series.length;
     confirmed.innerHTML = "Total Confirmed : <span>" + data.cases_time_series[s - 1].totalconfirmed + "</span>";
     active.innerHTML = "Total Active : <span>" + (data.cases_time_series[s - 1].totalconfirmed - data.cases_time_series[s - 1].totalrecovered - data.cases_time_series[s - 1].totaldeceased) + "</span>";
     recovered.innerHTML = "Total Recovered : <span>" + data.cases_time_series[s - 1].totalrecovered + "</span>";
     deceased.innerHTML = "Total Deceased : <span>" + data.cases_time_series[s - 1].totaldeceased + "</span>";
 
-    var table=document.createElement('table');
-    var tr=document.createElement('tr');
+    var table = document.createElement('table');
+    var tr = document.createElement('tr');
 
-    tr.innerHTML=`<tr>
+    tr.innerHTML = `<tr>
     <th><span>STATE</span></th>
     <th>TOTAL CONFIRMED</th>
     <th>ACTIVE CASES</th>
@@ -81,26 +82,23 @@ async function calldata(url) {
     <th>DEATHS</th>
     </tr>`;
     table.appendChild(tr);
-    
-    var len=data.statewise.length;
-    var statewise=data.statewise;
+
+    var len = data.statewise.length;
+    var statewise = data.statewise;
 
     console.log(statewise);
-    for(var i=1;i<len;i++)
-    {
-        if(i!=31)
-        {
-            var tr=document.createElement('tr');
-            tr.innerHTML=`
-            <td>`+statewise[i].state+`</td>
-            <td>`+statewise[i].confirmed+`</td>
-            <td>`+statewise[i].active+`</td>
-            <td>`+statewise[i].recovered+`</td>
-            <td>`+statewise[i].deaths+`</td>`
+    for (var i = 1; i < len; i++) {
+        if (i != 31) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = `
+            <td>` + statewise[i].state + `</td>
+            <td>` + statewise[i].confirmed + `</td>
+            <td>` + statewise[i].active + `</td>
+            <td>` + statewise[i].recovered + `</td>
+            <td>` + statewise[i].deaths + `</td>`
             table.appendChild(tr);
-        }
-        else
-        continue;
+        } else
+            continue;
     }
     document.getElementById('table').appendChild(table);
 
